@@ -1,11 +1,13 @@
 import axios from "axios";
-
-export const instance = axios.create({
-  herader: {
-    serviceKey: "d495777b-b67e-4198-8881-fa5207b13136",
+const token = "d495777b-b67e-4198-8881-fa5207b13136";
+const instance = axios.create({
+  headers: {
+    serviceKey: token,
   },
-  httpAgent: {
+  httpsAgent: {
     rejectUnauthorized: false,
   },
   baseURL: "http://center.koamise.com",
 });
+
+export default instance;

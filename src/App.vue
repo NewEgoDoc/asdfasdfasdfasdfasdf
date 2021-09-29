@@ -1,13 +1,16 @@
 <template>
   <div>
-    Hello World
+    <call-page></call-page>
   </div>
 </template>
 
 <script>
+import CallPage from "@/components/CallPage.vue";
 export default {
   name: "App",
-  components: {},
+  components: {
+    CallPage,
+  },
 };
 </script>
 
